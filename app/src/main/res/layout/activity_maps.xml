@@ -1,0 +1,43 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_layout"
+        android:layout_alignParentBottom="true"
+        tools:context="com.atasin.mapsapi.MapsActivity" />
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/TF_Location"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/map"
+            android:layout_alignParentStart="true"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/B_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:onClick="onCLickSearchPeta"
+            android:text="Search" />
+    </LinearLayout>
+
+</RelativeLayout>
+
